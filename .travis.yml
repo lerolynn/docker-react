@@ -4,4 +4,6 @@ services:
 
 before_install:
   - docker build -t lerolynn/docker-react -f Dockerfile.dev .
-   
+  
+script:
+  - docker run lerolynn/docker-react npm run test -- --coverage
